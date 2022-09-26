@@ -42,12 +42,13 @@ while($proyecto = mysqli_fetch_assoc($select_product)){
 			<td><?php echo $proyecto['id_user']; ?></td>
 			<td><?php echo $proyecto['user']; ?></td>
 			<td><?php echo $proyecto['password']; ?></td>
-			<td><a  class="btn btn-danger" href="?borrar=<?php echo $proyecto['id_user']; ?>" name="borrar">Eliminar</a></td>
+			<td><input type="submit" class="btn btn-danger"  value="<?php echo $proyecto['id_user']; ?>"  id="id" onclick="eliminar()"></td>
 			<td><a  class="btn btn-primary" href="modificar.php?modificar=<?php echo $proyecto['id_user']; ?>" name="borrar">Modificar</a></td>
 		</tr>
 		<?php } ?>
 	</tbody>
 </table>
+<div id="respuesta" class="col-md-4">   </div>
 </div>
 		</div>
 

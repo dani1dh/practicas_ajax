@@ -29,3 +29,18 @@ function insertar() {
 		$('#respuesta').html(res);
 	})
 }
+function eliminar() {
+	var id = document.getElementById('id').value;
+	
+
+	var datos = "Id="+id;
+	$.ajax({
+		url: 'eliminar.php', //Hacia donde van a enviar los valores
+		type: 'POST', // Remplaza el method
+		data: datos, // Nombre de la variable donde se estan resiviendo los datos.
+	})
+
+	.done(function(res){ //cuando se resive datos envia una respuest
+		$('#respuesta').html(res);
+	})
+}
