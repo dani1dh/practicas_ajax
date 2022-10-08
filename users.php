@@ -13,7 +13,7 @@
 	<title>Usuarios</title>
 </head>
 <body>
-	<?php require("nav.php"); ?>
+	
 <div class="container">
 	<div class="row">
 		<div class="col-md-1"></div>
@@ -42,13 +42,13 @@ while($proyecto = mysqli_fetch_assoc($select_product)){
 			<td><?php echo $proyecto['id_user']; ?></td>
 			<td><?php echo $proyecto['user']; ?></td>
 			<td><?php echo $proyecto['password']; ?></td>
-			<td><input type="submit" class="btn btn-danger"  value="<?php echo $proyecto['id_user']; ?>"  id="id" onclick="eliminar()"></td>
-			<td><a  class="btn btn-primary" href="modificar.php?modificar=<?php echo $proyecto['id_user']; ?>" name="borrar">Modificar</a></td>
+	        <td><a class="btn btn-danger " onclick="eliminar(<?php echo $proyecto['id_user'];?>)">Eliminar</a></td>
+                 <td><a class="btn btn-primary " onclick="mod(<?php echo $proyecto['id_user'];?>)">Modificar</a></td>
 		</tr>
 		<?php } ?>
 	</tbody>
 </table>
-<div id="respuesta" class="col-md-4">   </div>
+
 </div>
 		</div>
 

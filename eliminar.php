@@ -1,22 +1,22 @@
 <?php 
 require("conexion.php");
 
-$id= $_POST['Id'];
+$id= $_POST['id_e'];
 if (isset($id)) {
 	
 
 $sql=$mysqli->query("DELETE FROM usuarios WHERE id_user = '$id'");
 
 if ($sql) {
-	echo "usuario eliminado";
+	echo '<p class="si">usuario eliminado<p>';
 }
 
 else{
-	echo "usuario no eliminado";
+	echo '<p class="si">usuario no eliminado<p>';
  }
 
 
 }else{
-	echo "error";
+	echo '<p class="si">ERROR<p>';
 }
 ?>

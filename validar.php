@@ -21,6 +21,9 @@ echo"<script>location.href='index.php'</script>";
 elseif ($password != $f2['password']) {
 echo "CONTRASEÑA INCORRETO";
 }
+elseif ($password != $f2['password'] && $user != $f2['user']) {
+echo "CONTRASEÑA Y CORREO INCORRETOS";
+}
 }elseif(empty($user) || empty($password)){
     echo"Llena todos los datos";
 }

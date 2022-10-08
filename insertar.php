@@ -9,17 +9,17 @@ if($f2 =$sql->fetch_array()){
 
 
 if($user == $f2['user']){
-echo"Usuario existente";
+echo '<p class="si">usuario existente<p>';
 
 }
 
 }elseif(empty($user)){
-    echo"Llena todos los datos";
+    echo '<p class="si">Llenar todos los datos<p>';
 }
 else{
     $insert=$mysqli->query("INSERT INTO usuarios( user, password) VALUES ('$user','$password')");
 /*echo"<script>location.href='index.php'</script>";*/
-echo"Usuario registrado";
+echo '<p class="si">usuario registrado<p>';
 }
 
  ?>
